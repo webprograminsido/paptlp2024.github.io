@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUTURA ESCOLA ETI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Jaro:opsz@6..72&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  
+
+</head>
+<body>
+        <!-- start navbar -->
+
+    <nav class="navbar">
+
+
+        <a href="#" class="navbar-titel">ETI - Díli</a>
+
+
+        <div class="navbar-items">
+            <a href="index.html">VARANDA</a>
+            <a href="estrutura.html">ESTRUTURA</a>
+            <a href="departamento.html">DEPARTAMENTU</a>
+            <a href="fatin.html">FATIN</a>
+            <a href="contact.html">KONTAKTU</a>
+        </div>
+
+        <div class="icons">
+            <a href="#" id="book-open">  <i data-feather="book-open"></i></a>
+            <a href="#" id="menu" class="menu"> <i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+<!-- end navbar -->
+
+<!-- start contac -->
+<section class="fatin">
+
+    <h2>KONTAKTU</h2>
+     <p>Bele fo ita bo'ot nia Komentario ruma kona-ba Website ida ne'e</p>   
+     <br>
+     <div class="group">
+     <form  name="submit-to-google-sheet" class="form">
+        <label for="naran"></label><i data-feather="user" width="20px" class="iii f"></i></label>
+        <br>
+        <input type="text" name="naran" id="naran" placeholder="Prense Naran">
+        <br>
+        <br>
+        <label for="mensagen"><i data-feather="message-circle" width="20px" class="iii f" pla></i></label>
+        <br>
+        <input type="text" name="mensagen" id="mensagen" placeholder="Hakerek Mensagen">
+        <br>
+        <br>
+        <button class="btn2" type="submit">MANDA</button>
+    </form>
+</div>
+    
+</section>
+
+
+
+<!-- end -->
+
+<!-- start footer -->
+
+<footer class="footer">
+
+    <div class="row-footer">
+        <h3>ETI-DILI</h3>
+        <p>FomentuII, Dili, Timor-Leste. </p>
+        <a href="https://web.facebook.com/share/17xpjYqG4N5BmpfV/"><i data-feather="facebook" width="20px" class="iii f"></i></a>
+        <a href="https://escolatecnicainformaticadili2022.blogspot.com/"><i data-feather="book"  width="20px" class="iii m"></i></a>
+        <a href="https://www.youtube.com/results?search_query=oficial+eti+dili"><i data-feather="youtube"  width="20px" class="iii y"></i></a>
+        <a href="contact.html"><i data-feather="arrow-up" class="iii yy" width="20px"></i></a>
+    </div>
+
+    <div class="footer-bg">
+        <p>©Copyright Oficial ETI- DÍLI
+        </p>
+        <p>Designed by TLP</p>
+    </div>
+
+
+</footer>
+
+<!-- end -->
+
+
+<!-- stat javascript -->
+<script>
+    const nav = document.querySelector('.navbar-items');
+   document.querySelector('#menu').onclick = () => {
+        nav.classList.toggle('aktiv');
+   }
+
+
+
+  const btn = document.querySelector('.btn2').onclick = () => {
+    alert('Obrigadu ba ita boot nia mensagen'); 
+   
+}
+
+ 
+  
+</script>
+
+
+
+<!-- end javascript -->
+   
+<!-- icons -->
+    <script>
+        feather.replace();
+    </script>
+
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaTWXj004ewhZo2KG1A2yVd6wrA_rwJb__bPJRI0lSU5ojzjdwGR96QmLYxfv81-Mvmw/exec'
+    const form = document.forms['submit-to-google-sheet'];
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
